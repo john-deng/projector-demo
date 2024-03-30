@@ -20,7 +20,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompile
 import java.util.*
 
 plugins {
-  kotlin("jvm")
+  kotlin("jvm")  version "1.5.20"
   application
 }
 
@@ -73,6 +73,7 @@ configurations.all {
 }
 
 dependencies {
+  implementation(kotlin("stdlib"))
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
   implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
   when (projectorServerSource) {
